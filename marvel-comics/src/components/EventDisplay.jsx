@@ -6,6 +6,8 @@ const EventDisplay = () => {
 
 
   return (
+    <>
+    <h2 className="event-page-title">These are the events involving the charcter in the main page</h2>
       <div className="event-display">
         {events.map((event) => (
         <div className="event-card" key={event.id}>
@@ -18,6 +20,7 @@ const EventDisplay = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 export default EventDisplay;

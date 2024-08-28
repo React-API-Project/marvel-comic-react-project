@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 2rem;
   /* Nav-bar length */
-  margin-top: 50px;
+  margin-top: px;
   text-align: center;
 }
 
@@ -96,7 +96,7 @@ li {
 }
 
 form {
-  margin-top: 30px;
+  margin-top: 60px;
   position: relative;
   display: flex;
 }
@@ -203,6 +203,10 @@ li {
   font-size: 20px;
 }
 
+.comic-display-title {
+  margin-top: 70px;
+  color: black;
+}
 /* comic display images */
 /* div */
 .comic-display {
@@ -281,7 +285,10 @@ li {
   padding: 35px;
   border-radius: 25px;
 }
-
+.event-page-title {
+  color: black;
+  margin-top: 70px;
+}
 .event-display {
   height: 100px;
   width: 100%;
@@ -289,7 +296,9 @@ li {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
+.marvel-event-title {
+  color: black;
+}
 .event-image {
   height: 400px;
   width: 400px;

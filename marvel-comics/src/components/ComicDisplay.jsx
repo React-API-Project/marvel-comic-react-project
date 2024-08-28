@@ -9,7 +9,7 @@ const ComicDisplay = () => {
 
   return (
     <>
-    <h2 className="comic-display-title"> View the Comics for the charcter in main page </h2>
+    <h2 className="comic-display-title"> View the Comics for the character in main page </h2>
     <div className="comic-display">
       {comics.map((comic) => (
         <div className="comic-card" key={comic.id}>
