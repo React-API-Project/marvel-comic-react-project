@@ -282,18 +282,17 @@ li {
   border-radius: 25px;
 }
 
-
 .event-display {
   height: 100px;
-  width: 100px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-/* 
 .event-image {
-  height: 100px;
-  width: 100px;
+  height: 400px;
+  width: 400px;
   display: flex;
   flex-wrap: wrap;
-} */
+} 

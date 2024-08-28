@@ -6,10 +6,9 @@ const EventDisplay = () => {
 
 
   return (
-    <div className="event-display">
-      {events.map((event) => (
-        <div
-          className="event-card" key={event.id}>
+      <div className="event-display">
+        {events.map((event) => (
+        <div className="event-card" key={event.id}>
           <h2 className="marvel-event-title">{event.title}</h2>
           <img
             className="event-image"
