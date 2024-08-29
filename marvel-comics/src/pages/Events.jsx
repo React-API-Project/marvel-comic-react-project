@@ -43,9 +43,9 @@ const Events = () => {
   return (
     <>
       {loading && <p>Loading in progress... </p>}
-
       {error && <p className="error">{error}</p>}
       {!loading && !error && events && <p></p>}
+
       <EventDisplay />
     </>
   );
