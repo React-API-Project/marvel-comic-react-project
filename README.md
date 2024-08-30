@@ -2,7 +2,7 @@
 
 ## User Input Fetch
 
-### Character Search Results - User input fetched 
+### Character Search Results
 
 <img width="1440" alt="Screen Shot 2024-08-30 at 1 32 21 PM" src="https://github.com/user-attachments/assets/4e836668-b69a-416b-b19e-d9afc1535fa2">
 <img width="1440" alt="Screen Shot 2024-08-30 at 1 32 43 PM" src="https://github.com/user-attachments/assets/54ca5b89-20d4-4fdd-9a3a-0cd1442764c0">
