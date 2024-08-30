@@ -1,4 +1,6 @@
-# Marvel-Themed Application 
+# Marvel World
+
+## Application Overview
 This application allows users to explore Marvel characters, view their event participation, and discover comic books. By leveraging the Marvel Developer API, the app provides dynamic and engaging content related to Marvel’s vast universe.
 
 
