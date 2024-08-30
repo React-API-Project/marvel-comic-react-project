@@ -59,7 +59,7 @@ const MarvelSearch = () => {
             {error && <p className="error">{error}</p>} {/* Render error message if there's an error */}
             {characters.length === 0 && !error && <p></p>}
             <div className="search-description">
-                <p>*Due to API restrictions use simple MARVEL hero names!* </p>
+                {/* <p>*Due to API restrictions use simple MARVEL hero names!* </p> */}
             </div>
             <CharacterDisplay /> {/* Render the CharacterDisplay component */}
         </>
