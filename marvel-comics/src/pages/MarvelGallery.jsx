@@ -2,8 +2,8 @@ import '../App.css';
 import { useComic } from '../App'; // Import the custom hook to access context
 import ComicDisplay from '../components/ComicDisplay';
 import { useState, useEffect } from 'react';
-import { API_KEY, HASH } from '../config.js';
 import fetchData from '../components/Fetch.jsx'; // Ensure fetchData is properly implemented
+
 
 // Example list of character IDs (Replace these with actual IDs you want to use)
 const CHARACTER_IDS = [
@@ -19,6 +19,8 @@ const CHARACTER_IDS = [
   1009718, //wolverine
 
 ];
+const API_KEY = import.meta.env.VITE_API_KEY;
+const HASH = import.meta.env.VITE_HASH;
 
 const getRandomItem = (items) => {
   const randomIndex = Math.floor(Math.random() * items.length);

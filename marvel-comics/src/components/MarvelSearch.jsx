@@ -2,17 +2,24 @@
 import { useCharacter } from '../App'; // Adjust the import path as needed
 import CharacterDisplay from './CharacterDisplay';
 import { useState, useEffect } from 'react';
-import { API_KEY, HASH } from '../config.js';
 import fetchData from '../components/Fetch.jsx';
+
 
 const MarvelSearch = () => {
     const [query, setQuery] = useState(''); // Default query
-
     const { error, characters, setError, setCharacters } = useCharacter();
+    const API_KEY = import.meta.env.VITE_API_KEY;
+    const HASH = import.meta.env.VITE_HASH;
+
+
+
+
+    console.log(API_KEY)
 
     const handleSearch = (e) => {
         e.preventDefault();
         const newQuery = e.target.elements.query.value.trim();
+
         setQuery(newQuery);
     };
 
@@ -51,7 +58,7 @@ const MarvelSearch = () => {
 
             {error && <p className="error">{error}</p>} {/* Render error message if there's an error */}
             {characters.length === 0 && !error && <p></p>}
-            <div class="search-description">
+            <div className="search-description">
                 <p>*Due to API restrictions use simple MARVEL hero names!* </p>
             </div>
             <CharacterDisplay /> {/* Render the CharacterDisplay component */}

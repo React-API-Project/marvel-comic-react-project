@@ -1,6 +1,5 @@
 import '../App.css';
 import { useState, useEffect } from 'react';
-import { API_KEY, HASH } from '../config.js';
 import fetchData from '../components/Fetch.jsx';
 import EventDisplay from '../components/EventDisplay.jsx'
 import { useEvent } from '../App';
@@ -8,8 +7,12 @@ import { useParams } from 'react-router-dom';
 import CharacterDisplay from '../components/CharacterDisplay.jsx';
 
 
-
 const Events = () => {
+
+  const API_KEY = import.meta.env.VITE_API_KEY;
+  const HASH = import.meta.env.VITE_HASH;
+
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const { events, setEvents, setError: setContextError } = useEvent(); // through context grab EventDisplay
