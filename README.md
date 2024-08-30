@@ -13,7 +13,7 @@ Character Search Results
 Clicking the "Description" button prompts a bio about the fetched character.
 
 <img width="1440" alt="Screen Shot 2024-08-30 at 1 44 28 PM" src="https://github.com/user-attachments/assets/c9b80ae3-15c3-47a1-b24f-fa469aa4d6ed">
-<img width="1440" alt="Screen Shot 2024-08-30 at 1 32 49 PM" src="https://github.com/user-attachments/assets/895be3ae-2da1-4559-80de-02f1bfb3d9c8">
+<img width="1440" alt="Screen Shot 2024-08-30 at 2 55 06 PM" src="https://github.com/user-attachments/assets/04ef1122-a486-482b-9e16-24a413f81101">
 
 
 ### Event Details
