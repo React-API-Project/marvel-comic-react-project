@@ -50,7 +50,10 @@ const MarvelSearch = () => {
             {/* {loading && <p>Loading in progress...</p>}Display loading message */}
 
             {error && <p className="error">{error}</p>} {/* Render error message if there's an error */}
-            {characters.length === 0 && !error && <p>Search a Character</p>}
+            {characters.length === 0 && !error && <p></p>}
+            <div class="search-description">
+                <p>*Due to API restrictions use simple MARVEL hero names!* </p>
+            </div>
             <CharacterDisplay /> {/* Render the CharacterDisplay component */}
         </>
     );

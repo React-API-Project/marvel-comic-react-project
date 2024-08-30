@@ -5,6 +5,7 @@ import fetchData from '../components/Fetch.jsx';
 import EventDisplay from '../components/EventDisplay.jsx'
 import { useEvent } from '../App';
 import { useParams } from 'react-router-dom';
+import CharacterDisplay from '../components/CharacterDisplay.jsx';
 
 
 
@@ -42,6 +43,7 @@ const Events = () => {
   // ^^^^ it was empty[]
   return (
     <>
+      <p>Surprise! The character you just clicked participated in the events below.</p>
       {loading && <p>Loading in progress... </p>}
 
       {error && <p className="error">{error}</p>}

@@ -117,10 +117,13 @@ form {
   background-color: black;
 }
 
-.character-image {
-  border: solid black 5px;
-  border-radius: 25px;
-  padding: 5px;
+
+
+.character-image:hover {
+  border-color: green;
+  /* Change border color on hover */
+  transform: scale(1.1);
+  /* Slightly enlarge the image on hover */
 }
 
 /* For placeholder */
@@ -136,13 +139,7 @@ form {
 }
 
 /* Descritpion */
-.descriptionSize {
-  font-size: 30px;
-  line-height: 1.5;
-  border: 5px solid black;
-  border-radius: 25px;
-  padding: 10px;
-}
+
 
 /* Search Button */
 .search-button {
@@ -156,6 +153,7 @@ form {
   color: black;
   font-size: 40px;
   text-align: center;
+  margin: 0;
 }
 
 /* Photo of Character */
@@ -312,5 +310,38 @@ li {
   /* Reduce padding inside the items */
   background-color: #333;
   /* Example background color */
+
+}
+
+.search-description {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.gallery-description {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.descriptionSize {
+  font-size: 25px;
+  line-height: 1.5;
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 10px;
+
+}
+
+.character-image {
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 5px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 500px;
+  width: 600px;
 
 }

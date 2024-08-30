@@ -67,7 +67,10 @@ const MarvelGallery = () => {
 
   return (
     <>
-     {/*} {loading && <p>Loading in progress... </p>} */}
+      <div class="gallery-description">
+        <p>Comic book covers for various Marvel heroes, with automatic refreshes. </p>
+      </div>
+      {/*} {loading && <p>Loading in progress... </p>} */}
       {error && <p className="error">{error}</p>}
       {!loading && !error && comics.length === 0 && <p>No comics found</p>}
       <ComicDisplay />
