@@ -274,11 +274,19 @@ li {
 }
 
 .site-description {
-  background-color: white;
+  background-color: black;
   width: 800px;
-  padding: 35px;
+  padding: 25px;
   border-radius: 25px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2em;
+  /* Adjusted font size */
+  line-height: 1.6;
+  text-align: justify;
+  text-indent: 20px;
 }
+
 
 .event-display {
   display: flex;
@@ -334,6 +342,7 @@ li {
   border-radius: 15px;
   padding: 10px;
 
+
 }
 
 .character-image {
@@ -343,5 +352,4 @@ li {
   transition: transform 0.3s ease, border-color 0.3s ease;
   height: 500px;
   width: 600px;
-
 }
