@@ -39,7 +39,7 @@ const MarvelSearch = () => {
             fetchCharacters();
         }
     }, [query]); // Fetch new data when query changes
-
+    //testing
     return (
         <>
             <form onSubmit={handleSearch}>
