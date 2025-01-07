@@ -25,7 +25,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/marvel-comic-react-project">
       <CharacterContext.Provider value={{ characters, error, setCharacters, setError }}>
 
         <ComicContext.Provider value={{ comics, error, setComics, setError }}>
