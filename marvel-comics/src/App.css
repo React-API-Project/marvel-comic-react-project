@@ -3,13 +3,15 @@
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
- /* Nav-bar length */
+  /* Nav-bar length */
   margin-top: 50px;
   text-align: center;
 }
+
 html {
   width: 100%;
 }
+
 /* ----- Basic Class CSS ---- */
 /* Color Scheme */
 body {
@@ -92,6 +94,7 @@ li {
   align-items: center;
   width: 100%;
 }
+
 form {
   margin-top: 30px;
   position: relative;
@@ -114,10 +117,13 @@ form {
   background-color: black;
 }
 
-.character-image {
-  border: solid black 5px;
-  border-radius: 25px;
-  padding: 5px;
+
+
+.character-image:hover {
+  border-color: green;
+  /* Change border color on hover */
+  transform: scale(1.1);
+  /* Slightly enlarge the image on hover */
 }
 
 /* For placeholder */
@@ -133,13 +139,7 @@ form {
 }
 
 /* Descritpion */
-.descriptionSize {
-  font-size: 30px;
-  line-height: 1.5;
-  border: 5px solid black;
-  border-radius: 25px;
-  padding: 10px;
-}
+
 
 /* Search Button */
 .search-button {
@@ -153,6 +153,7 @@ form {
   color: black;
   font-size: 40px;
   text-align: center;
+  margin: 0;
 }
 
 /* Photo of Character */
@@ -167,7 +168,7 @@ form {
 }
 
 .navBarContainer {
- display: flex;
+  display: flex;
 }
 
 /* Nav Bar Container */
@@ -264,6 +265,7 @@ li {
   flex-direction: column;
   align-items: center;
 }
+
 .about-title {
   margin: 0 auto;
   padding: 2rem;
@@ -272,9 +274,82 @@ li {
 }
 
 .site-description {
- background-color: white;
- width: 800px;
- padding: 35px;
- border-radius: 25px;
+  background-color: black;
+  width: 800px;
+  padding: 25px;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2em;
+  /* Adjusted font size */
+  line-height: 1.6;
+  text-align: justify;
+  text-indent: 20px;
 }
 
+
+.event-display {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap onto the next line */
+  justify-content: flex-start;
+  /* Align items to the start of the container */
+  align-items: flex-start;
+  /* Align items to the top of the row */
+  border-radius: 4px;
+  /* Adjust the border radius */
+  padding: 8px;
+  /* Padding for the container */
+  gap: 8px;
+  /* Space between items */
+  max-width: 100%;
+  /* Allow the container to use full width */
+  justify-content: center;
+}
+
+.event-image {
+  width: 270px;
+  /* Set a smaller width for items */
+  height: 270px;
+  /* Set a smaller height for items */
+  border-radius: 4px;
+  /* Match the border radius */
+  padding: 2px;
+  /* Reduce padding inside the items */
+  background-color: #333;
+  /* Example background color */
+
+}
+
+.search-description {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.gallery-description {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.descriptionSize {
+  font-size: 25px;
+  line-height: 1.5;
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 10px;
+
+
+}
+
+.character-image {
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 5px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 500px;
+  width: 600px;
+}

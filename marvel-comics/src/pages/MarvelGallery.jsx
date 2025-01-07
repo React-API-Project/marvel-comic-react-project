@@ -2,8 +2,8 @@ import '../App.css';
 import { useComic } from '../App'; // Import the custom hook to access context
 import ComicDisplay from '../components/ComicDisplay';
 import { useState, useEffect } from 'react';
-import { API_KEY, HASH } from '../config.js';
 import fetchData from '../components/Fetch.jsx'; // Ensure fetchData is properly implemented
+
 
 // Example list of character IDs (Replace these with actual IDs you want to use)
 const CHARACTER_IDS = [
@@ -19,6 +19,8 @@ const CHARACTER_IDS = [
   1009718, //wolverine
 
 ];
+const API_KEY = import.meta.env.VITE_API_KEY;
+const HASH = import.meta.env.VITE_HASH;
 
 const getRandomItem = (items) => {
   const randomIndex = Math.floor(Math.random() * items.length);
@@ -59,7 +61,7 @@ const MarvelGallery = () => {
     fetchComics();
 
     // timer to fetch comics periodically
-    const intervalId = setInterval(fetchComics, 5000); // 5000 ms = 5 seconds
+    const intervalId = setInterval(fetchComics, 10000); // 5000 ms = 5 seconds
 
     // Cleanup the timer on component unmount
     return () => clearInterval(intervalId);
@@ -67,7 +69,10 @@ const MarvelGallery = () => {
 
   return (
     <>
-     {/*} {loading && <p>Loading in progress... </p>} */}
+      <div class="gallery-description">
+        <p>Comic book covers for various Marvel heroes, with automatic refreshes. </p>
+      </div>
+      {/*} {loading && <p>Loading in progress... </p>} */}
       {error && <p className="error">{error}</p>}
       {!loading && !error && comics.length === 0 && <p>No comics found</p>}
       <ComicDisplay />
