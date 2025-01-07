@@ -10,13 +10,13 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --verbose"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "require": "^2.4.20"
+    "require": "^0.4.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
