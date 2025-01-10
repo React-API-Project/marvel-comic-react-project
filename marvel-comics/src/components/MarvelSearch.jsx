@@ -23,7 +23,7 @@ const MarvelSearch = () => {
         setQuery(newQuery);
     };
 
-    const API_URL = `http://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}&name=${query}`;
+    const API_URL = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}&name=${query}`;
 
     useEffect(() => {
         const fetchCharacters = async () => {
