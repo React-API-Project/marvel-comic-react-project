@@ -23,7 +23,7 @@ const Events = () => {
       setLoading(true);
       try {
         // Fetch comics for the selected character
-        const eventsURL = `http://gateway.marvel.com/v1/public/characters/${characterId}/events?ts=1&apikey=${API_KEY}&hash=${HASH}`;
+        const eventsURL = `https://gateway.marvel.com/v1/public/characters/${characterId}/events?ts=1&apikey=${API_KEY}&hash=${HASH}`;
         const eventsResponse = await fetchData(eventsURL);
         const eventsData = eventsResponse.data.results;
 
