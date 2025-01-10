@@ -9,6 +9,6 @@ export default defineConfig(({ mode }) => {
       'process.env': env
     },
     plugins: [react()],
-    base: 'https://react-api-project.github.io/',
+    base: '/marvel-comic-react-project/',
   }
 })
