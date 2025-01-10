@@ -40,7 +40,7 @@ const MarvelGallery = () => {
         const randomCharacterId = getRandomItem(CHARACTER_IDS);
 
         // Fetch comics for the selected character
-        const comicsURL = `http://gateway.marvel.com/v1/public/characters/${randomCharacterId}/comics?ts=1&apikey=${API_KEY}&hash=${HASH}`;
+        const comicsURL = `https://gateway.marvel.com/v1/public/characters/${randomCharacterId}/comics?ts=1&apikey=${API_KEY}&hash=${HASH}`;
         const comicsResponse = await fetchData(comicsURL);
         const comicsData = comicsResponse.data.results;
 

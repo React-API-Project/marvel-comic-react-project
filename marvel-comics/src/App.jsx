@@ -18,6 +18,7 @@ const EventContext = createContext();
 
 const hello = 'hello'
 console.log(hello)
+
 const App = () => {
   const [events, setEvents] = useState([]);
   const [comics, setComics] = useState([]);
