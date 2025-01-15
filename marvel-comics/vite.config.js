@@ -13,5 +13,6 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: false, //ensuring that root folder is not cleared when rebuilding
     },
     plugins: [react()],
+    base: '/marvel-comic-react-project/'
   }
 })
