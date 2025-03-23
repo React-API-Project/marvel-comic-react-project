@@ -11,10 +11,7 @@ const MarvelSearch = () => {
     const API_KEY = import.meta.env.VITE_API_KEY;
     const HASH = import.meta.env.VITE_HASH;
 
-
-
-
-    console.log(API_KEY)
+    console.log("Here's the API KEY: " + API_KEY + " and the HASH: " + HASH)
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -23,7 +20,14 @@ const MarvelSearch = () => {
         setQuery(newQuery);
     };
 
-    const API_URL = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}&name=${query}`;
+    console.log("import.meta.env:", import.meta.env);
+
+    console.log("The search is: " + query)
+
+    // const API_URL = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}&name=${query}`;
+
+    const API_URL = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}&name=${encodeURIComponent(query)}`;
+
 
     useEffect(() => {
         const fetchCharacters = async () => {
@@ -59,7 +63,7 @@ const MarvelSearch = () => {
             {error && <p className="error">{error}</p>} {/* Render error message if there's an error */}
             {characters.length === 0 && !error && <p></p>}
             <div className="search-description">
-                {/* <p>*Due to API restrictions use simple MARVEL hero names!* </p> */}
+                {/* <p>* Due to API restrictions use simple MARVEL hero names!* </p> */}
             </div>
             <CharacterDisplay /> {/* Render the CharacterDisplay component */}
         </>

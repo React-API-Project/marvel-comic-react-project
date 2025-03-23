@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext, useContext } from 'react';
 //////
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 ///////
 import About from './pages/About';
@@ -16,8 +16,7 @@ const CharacterContext = createContext();
 const ComicContext = createContext();
 const EventContext = createContext();
 
-const hello = 'hello'
-console.log(hello)
+console.log("The App.jsx is connected")
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -26,7 +25,7 @@ const App = () => {
   const [error, setError] = useState('');
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <CharacterContext.Provider value={{ characters, error, setCharacters, setError }}>
 
         <ComicContext.Provider value={{ comics, error, setComics, setError }}>
@@ -49,7 +48,7 @@ const App = () => {
         </ComicContext.Provider>
 
       </CharacterContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
