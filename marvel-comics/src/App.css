@@ -2,7 +2,6 @@
 #root {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
   /* Nav-bar length */
   margin-top: 50px;
   text-align: center;
@@ -106,7 +105,6 @@ form {
   border: solid white;
   border-radius: 30px;
   height: 30px;
-  width: 300px;
   color: white;
   background-color: black;
 }
@@ -117,7 +115,19 @@ form {
   background-color: black;
 }
 
+.character-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.character-image {
+  border: solid black 5px;
+  border-radius: 25px;
+  padding: 5px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 500px;
+}
 
 .character-image:hover {
   border-color: green;
@@ -139,6 +149,13 @@ form {
 }
 
 /* Descritpion */
+.descriptionSize {
+  font-size: 25px;
+  line-height: 1.5;
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 10px;
+}
 
 
 /* Search Button */
@@ -158,7 +175,9 @@ form {
 
 /* Photo of Character */
 .character-display {
-  width: 900px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 /* Description Button */
@@ -173,6 +192,9 @@ form {
 
 /* Nav Bar Container */
 .nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: #333;
   padding: 10px 0px;
   /* Padding for spacing */
@@ -335,21 +357,10 @@ li {
   border-radius: 8px;
 }
 
-.descriptionSize {
-  font-size: 25px;
-  line-height: 1.5;
-  border: 5px solid black;
-  border-radius: 15px;
-  padding: 10px;
+@media (max-width: 480px) {
+  .character-image {
+    width: 100%;
+    height: 300px;
+  }
 
-
-}
-
-.character-image {
-  border: solid black 5px;
-  border-radius: 25px;
-  padding: 5px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  height: 500px;
-  width: 600px;
 }
