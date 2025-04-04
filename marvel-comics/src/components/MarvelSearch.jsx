@@ -52,7 +52,9 @@ const MarvelSearch = () => {
     }, [query]); // Fetch new data when query changes
     //testing
     return (
-        <>
+        <>  
+        <div className="content-container">
+            <p className="type-character">Type in a Marvel charcter's name!</p>
             <form onSubmit={handleSearch}>
                 <input className="inputBar" type="text" name="query" placeholder="Search for a character" />
                 <button className="search-button" type="submit">Search</button>
@@ -66,6 +68,7 @@ const MarvelSearch = () => {
                 {/* <p>* Due to API restrictions use simple MARVEL hero names!* </p> */}
             </div>
             <CharacterDisplay /> {/* Render the CharacterDisplay component */}
+        </div>
         </>
     );
 };

@@ -30,9 +30,7 @@ const App = () => {
 
         <ComicContext.Provider value={{ comics, error, setComics, setError }}>
           <EventContext.Provider value={{ events, error, setEvents, setError }}>
-            {/* <EventContext.Provider value={{ events, error, setEvents, setError }}> */}
-            <div className="main-content">
-              <NavBar />
+            <NavBar />
               {/* Using a nav bar in react */}
               {/* "/" is home page */}
               <Routes >
@@ -42,8 +40,6 @@ const App = () => {
                 <Route path="/events/:characterId" element={<Events />} ></Route>
                 <Route path="/pages/MarvelGallery" element={<MarvelGallery />}> </Route>
               </Routes>
-            </div>
-            {/* </EventContext.Provider> */}
           </EventContext.Provider>
         </ComicContext.Provider>
 

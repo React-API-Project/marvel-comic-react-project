@@ -46,12 +46,14 @@ const Events = () => {
   // ^^^^ it was empty[]
   return (
     <>
+    <div className="content-container">
       <p>Surprise! The character you just clicked participated in the events below.</p>
       {loading && <p>Loading in progress... </p>}
 
       {error && <p className="error">{error}</p>}
       {!loading && !error && events && <p></p>}
       <EventDisplay />
+    </div>
     </>
   );
 };
