@@ -97,7 +97,6 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px;
 }
 
 .type-character {
@@ -114,12 +113,11 @@ form {
 }
 
 .inputBar {
+  width: 400px;
   margin: 2%;
   border: solid white;
   border-radius: 30px;
   height: 30px;
-  color: white;
-  background-color: black;
   font-size: 16px;  /* Prevents Safari zoom-in */
 }
 
@@ -208,17 +206,21 @@ form {
 
 /* Nav Bar Container */
 .nav-bar {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 10px 0px;
-  /* Padding for spacing */
-  position: fixed;
   /* Fix position to the top */
   width: 100%;
   /* pushes nav to the very top and corners */
   z-index: 1000;
   /* Ensure it stays on top */
+  transition: transform 0.3s ease;
+}
+
+.nav-bar.hidden {
+  transform: translateY(-100%);
 }
 
 ul {

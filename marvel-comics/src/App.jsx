@@ -26,18 +26,16 @@ const App = () => {
 
   return (
     <HashRouter>
+        <NavBar />
       <CharacterContext.Provider value={{ characters, error, setCharacters, setError }}>
 
         <ComicContext.Provider value={{ comics, error, setComics, setError }}>
           <EventContext.Provider value={{ events, error, setEvents, setError }}>
-            <NavBar />
-              {/* Using a nav bar in react */}
-              {/* "/" is home page */}
               <Routes >
-                <Route path="/pages/about" element={<About />}> </Route>
                 <Route path="/" element={<MarvelSearch />}> </Route>
+                <Route path="/pages/about" element={<About />}> </Route>
                 {/* <Route path="/" element={<EventDisplay />}> </Route> */}
-                <Route path="/events/:characterId" element={<Events />} ></Route>
+                <Route path="/events/:characterId" element={<Events />} > </Route>
                 <Route path="/pages/MarvelGallery" element={<MarvelGallery />}> </Route>
               </Routes>
           </EventContext.Provider>
