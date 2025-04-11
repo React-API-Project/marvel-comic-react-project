@@ -23,13 +23,14 @@ const App = () => {
   const [comics, setComics] = useState([]);
   const [characters, setCharacters] = useState([]); // Change to an array to hold multiple characters
   const [error, setError] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <HashRouter>
         <NavBar />
       <CharacterContext.Provider value={{ characters, error, setCharacters, setError }}>
 
-        <ComicContext.Provider value={{ comics, error, setComics, setError }}>
+        <ComicContext.Provider value={{ comics, error, setComics, setError, searchQuery, setSearchQuery }}>
           <EventContext.Provider value={{ events, error, setEvents, setError }}>
               <Routes >
                 <Route path="/" element={<MarvelSearch />}> </Route>

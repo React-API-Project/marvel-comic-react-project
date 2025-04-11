@@ -6,7 +6,7 @@ import fetchData from '../components/Fetch.jsx';
 
 
 const MarvelSearch = () => {
-    const [query, setQuery] = useState(''); // Default query
+    const [query, setSearchQuery] = useState(''); // Default query
     const { error, characters, setError, setCharacters } = useCharacter();
     const API_KEY = import.meta.env.VITE_API_KEY;
     const HASH = import.meta.env.VITE_HASH;
@@ -17,7 +17,7 @@ const MarvelSearch = () => {
         e.preventDefault();
         const newQuery = e.target.elements.query.value.trim();
 
-        setQuery(newQuery);
+        setSearchQuery(newQuery);
     };
 
     console.log("import.meta.env:", import.meta.env);
